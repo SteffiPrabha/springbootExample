@@ -55,7 +55,6 @@ public class UserController {
 
     @GetMapping("/{userId}")
     User getUser(@PathVariable(name = "userId") Long userId) {
-        
         return userRepository.findById(userId).orElseThrow(NotFoundException::new);
     }
 
